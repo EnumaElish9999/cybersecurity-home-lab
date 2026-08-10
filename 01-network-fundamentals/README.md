@@ -13,7 +13,7 @@ Configure two computers on the same IPv4 network using a Cisco switch and verify
 
 ## Network Topology
 
-![Network Topology](topology.png)
+![ImagesHome](topology.png)
 
 ## IP Configuration
 
