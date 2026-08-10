@@ -14,7 +14,7 @@ Configure a router to allow communication between two separate IPv4 networks.
 
 ## Network Topology
 
-![Network Topology](topology.png)
+![Network Topology](topology1.png)
 
 ## Network Design
 
@@ -64,13 +64,11 @@ Example:
 PC0 → PC2
 192.168.1.10 → 192.168.2.10
 
-Because PC2 is on a different network, PC0 sends the traffic to its default gateway:
+Because PC2 is on a different network, PC0 sends the traffic to its default gateway: 192.168.1.1
 
-192.168.1.1
+The router then forwards the traffic toward 192.168.2.10
 
-The router then forwards the traffic toward:
-
-192.168.2.10
+### What I Learned
 
 This lab demonstrated how a router connects different IP networks.
 
