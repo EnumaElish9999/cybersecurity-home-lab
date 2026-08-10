@@ -28,5 +28,32 @@ Both hosts belong to the `192.168.1.0/24` network.
 
 From PC0, I tested connectivity to PC1 using:
 
-```text
 ping 192.168.1.20
+
+The ping was successful, demonstrating that both hosts could communicate through the switch.
+
+Troubleshooting Exercise
+
+I changed PC1's IP address to:
+
+192.168.2.20
+
+The ping from PC0 then failed.
+
+Explanation
+
+PC0 was configured on:
+
+192.168.1.0/24
+
+while PC1 was configured on:
+
+192.168.2.0/24
+
+These are different networks. Because the lab contained only a Layer 2 switch and no router, there was no device available to route traffic between the two networks.
+
+I restored PC1 to:
+
+192.168.1.20
+
+and connectivity was successfully restored.
