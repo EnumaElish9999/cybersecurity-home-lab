@@ -52,6 +52,14 @@ Build an isolated virtual network between Kali Linux and Windows 10 using Virtua
 ## Configuration
 
 Kali's internal interface was configured with:
-
-```text
 10.10.10.1/24
+
+Windows was configured with:
+10.10.10.10/24
+
+### Connectivity Testing
+
+Connectivity was tested from Windows using:
+ping 10.10.10.1
+
+The test successfully returned ICMP Echo Replies.
