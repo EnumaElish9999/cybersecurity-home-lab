@@ -30,7 +30,7 @@ Build an isolated virtual network between Kali Linux and Windows 10 using Virtua
           CyberLab LAN
                 │
         ┌───────┴───────┐
-        │ Windows 10  │
+        │ Windows 10    │
         │ 10.10.10.10   │
         └───────────────┘
 
