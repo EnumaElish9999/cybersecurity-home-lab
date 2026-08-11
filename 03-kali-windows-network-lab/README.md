@@ -43,7 +43,8 @@ Build an isolated virtual network between Kali Linux and Windows 10 using Virtua
 | eth0 | NAT | 10.0.2.15/24 |
 | eth1 | CyberLab | 10.10.10.1/24 |
 
-![Kali VirtualBox](03-kali-windows-network-lab/ImagesHome/Kali-Internal.png)
+![Kali VirtualBox](ImagesHome/Nat.png)
+![Kali VirtualBox](ImagesHome/KaliInternal.png)
 
 ### Windows 10
 
