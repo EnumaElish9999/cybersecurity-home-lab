@@ -13,7 +13,26 @@ Build an isolated virtual network between Kali Linux and Windows 10 using Virtua
 
 ## Network Topology
 
-![Network Topology](screenshots/network-topology.png)
+             Internet
+                │
+               NAT
+                │
+        ┌───────┴───────┐
+        │     Kali      │
+        │               │
+        │ eth0          │
+        │ 10.0.2.15     │
+        │               │
+        │ eth1          │
+        │ 10.10.10.1    │
+        └───────┬───────┘
+                │
+          CyberLab LAN
+                │
+        ┌───────┴───────┐
+        │ Windows 10  │
+        │ 10.10.10.10   │
+        └───────────────┘
 
 ## Virtual Network Configuration
 
