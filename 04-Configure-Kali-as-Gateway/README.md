@@ -102,4 +102,16 @@ After configuring NAT and forwarding, Windows was tested again.
 ```bash
 ping 8.8.8.8
 ```
-![PingTestAgain](pingtest.png)
+![PingTestAgain](testagain.png)
+
+## Result
+
+The test was successful.
+
+Windows → Kali             ✅
+Windows → 8.8.8.8          ✅
+Packet loss:               0%
+
+This confirmed that Kali was successfully routing and NATing traffic from the Windows VM to the Internet.
+
+
