@@ -115,3 +115,4 @@ Packet loss:               0%
 This confirmed that Kali was successfully routing and NATing traffic from the Windows VM to the Internet.
 
 
+
