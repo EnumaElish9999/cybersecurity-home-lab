@@ -74,8 +74,9 @@ Windows was configured with:
 ### Connectivity Testing
 
 Connectivity was tested from Windows using:
-
+```bash
 ping 10.10.10.1
+```
 
 ![Ping](ImagesHome/ping.png)
 
