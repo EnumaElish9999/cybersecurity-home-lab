@@ -54,6 +54,8 @@ Testing routing using Windows.
 ```bash
 ping 8.8.8.8
 ```
+![PingTest](pingtest.png)
+
 The ping test timed out and failed.
 
 NAT was not configured; Windows could reach Kali but could not reach the Internet.
