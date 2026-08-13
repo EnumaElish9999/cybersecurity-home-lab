@@ -11,7 +11,7 @@ Configure Kali Linux to act as a Gateway for Windows so that Kali can forward tr
 - Windows 10
 - Wireshark
 
-## Kali as Gateway
+## Network topology
 
 ```text
         Windows
@@ -60,8 +60,46 @@ The ping test timed out and failed.
 
 NAT was not configured; Windows could reach Kali but could not reach the Internet.
 
-Windows → Kali      ✅
-Windows → 8.8.8.8   ❌
+- Windows → Kali      ✅
+- Windows → 8.8.8.8   ❌
 
 This demonstrated that IP forwarding alone was not sufficient for Windows to access the Internet through Kali.
 
+## Step 3 - Configure NAT on Kali
+
+Kali translates Windows' private 10.10.10.0/24 traffic into Kali's Internet-facing address on eth0.
+
+### NAT rule 
+
+```bash
+sudo iptables -t nat -A POSTROUTING -s 10.10.10.0/24 -o eth0 -j MASQUERADE
+```
+Traffic from the Windows network leaves Kali through eth0; translate its address to access the Internet.
+The MASQUERADE rule allows Windows to access the Internet using Kali's network connection.
+
+### Allow forwarding
+
+```bash
+sudo iptables -A FORWARD -i eth1 -o eth0 -s 10.10.10.0/24 -j ACCEPT
+```
+
+```bash
+sudo iptables -A FORWARD -i eth0 -o eth1 -d 10.10.10.0/24 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+```
+The first rule allows:
+
+Windows → Kali eth1 → Kali eth0 → Internet
+
+The second rule allows the replies to return:
+
+Internet → Kali eth0 → Kali eth1 → Windows
+
+
+## Step 4 - Test Internet Connectivity
+
+After configuring NAT and forwarding, Windows was tested again.
+
+```bash
+ping 8.8.8.8
+```
+![PingTestAgain](pingtest.png)
