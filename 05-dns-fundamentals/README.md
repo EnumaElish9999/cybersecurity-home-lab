@@ -14,6 +14,6 @@ nslookup google.com 8.8.8.8
 ```
 ![nslookup](nslookup.png)
 
-Returned non-authoritative answer with both AAAA and A records:
-    2a00:1450:4009:c04::64, ::8b, ::71, ::8a
-    192.178.223.113, .102, .139, .101, .100, .138
+Returned multiple IPv4 and IPv6 addresses for google.com.
+
+## Wireshark Analysis
