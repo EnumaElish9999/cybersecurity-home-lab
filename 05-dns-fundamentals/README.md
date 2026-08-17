@@ -41,8 +41,6 @@ Captured on Kali's eth0 interface, filter: `dns`
 - The Transaction ID is what matches a response to its question. This
   matters in security because attackers try to fake/guess this ID to
   trick a computer into accepting a fake answer (DNS spoofing).
-- nslookup does more than one lookup behind the scenes — a reverse (PTR)
-  lookup to identify the DNS server, then the actual query you asked for.
 - The source port changes with every new query, but the reply always
   comes back to that exact port so the client knows which request it
   answers.
