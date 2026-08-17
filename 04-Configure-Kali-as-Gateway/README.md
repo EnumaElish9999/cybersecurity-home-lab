@@ -6,10 +6,8 @@ Configure Kali Linux to act as a Gateway for Windows so that Kali can forward tr
 
 ## Environment
 
-- VirtualBox
-- Kali Linux 2025.2
-- Windows 10
-- Wireshark
+- Kali: eth0 10.0.2.15 (NAT, internet-facing) / eth1 10.10.10.1 (internal gateway)
+- Windows 10 client: 10.10.10.10 -> gateway 10.10.10.1
 
 ## Network topology
 
