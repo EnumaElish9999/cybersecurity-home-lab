@@ -28,6 +28,8 @@ check the forwarding/NAT state on Kali:
     sudo iptables -t nat -L -v
     sudo iptables -L FORWARD -v
 
+![Rules](rules.png)
+
 The NAT rule and FORWARD rules had survived the reboot, which was a bit
 surprising, but confirmed the general lesson: `ip_forward` and iptables
 rules aren't guaranteed to persist across a reboot unless made
@@ -44,12 +46,16 @@ Ran this on Windows:
 ## Wireshark Capture
 Captured on Kali's eth1 interface, filter: `icmp`
 
+![resquestping](Wireshark8.8.8.8.png)
+
 **The request (packet 1140):**
 - 10.10.10.10 -> 8.8.8.8
 - Type: 8 (Echo request)
 - TTL: 128
 - Identifier: 0x0001
 - Sequence number: 32
+
+![replyping](wiresharkreply.png)
 
 **The reply (packet 1141):**
 - 8.8.8.8 -> 10.10.10.10
@@ -69,5 +75,5 @@ Captured on Kali's eth1 interface, filter: `icmp`
   let a device match each reply to the exact request it sent, especially
   useful when several pings are in flight at once (sequence number goes
   up by one each time: 32, 33, 34...).
-- TTL can hint at what OS sent a packet. Windows starts at 128, Linux
+- TTL can hint at what OS sent a packet. Windows starts at 128; Linux
   usually starts at 255 (arrived here as 254 after one hop).
