@@ -13,7 +13,7 @@ Capture and understand a ping (ICMP) request/reply pair in Wireshark.
 Before starting the ICMP capture, DNS lookups had stopped working again
 after a reboot.
 
-
+![Timedout](ping8.8.8.8.png)
 
 Checked in order:
 
@@ -33,6 +33,8 @@ surprising, but confirmed the general lesson: `ip_forward` and iptables
 rules aren't guaranteed to persist across a reboot unless made
 permanent. Re-checked/re-applied the settings, and connectivity returned
 before moving on to the ICMP capture below.
+
+![ping8.8.8.8](pingworks8.8.8.8.png)
 
 ## The Ping
 Ran this on Windows:
