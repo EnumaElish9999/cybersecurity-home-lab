@@ -46,6 +46,7 @@ Ran this on Windows:
 ## Wireshark Capture
 Captured on Kali's eth1 interface, filter: `icmp`
 
+### Request Ping
 ![resquestping](Wireshark8.8.8.8.png)
 
 **The request (packet 1140):**
@@ -55,6 +56,7 @@ Captured on Kali's eth1 interface, filter: `icmp`
 - Identifier: 0x0001
 - Sequence number: 32
 
+### Reply Ping
 ![replyping](wiresharkreply.png)
 
 **The reply (packet 1141):**
