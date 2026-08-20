@@ -42,11 +42,3 @@ readable text.
 - Because none of this is encrypted, anyone capturing this traffic can
   read the full request, response, and headers in plain text. This is
   exactly the gap HTTPS closes -- covered next in Lab 10.
-
-## Folder structure
-lab-09-http-analysis/
-├── README.md
-└── screenshots/
-    ├── http-stream.png
-    ├── wireshark-request.png
-    └── wireshark-response.png
