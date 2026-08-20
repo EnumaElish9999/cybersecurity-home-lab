@@ -20,15 +20,21 @@ Captured on Kali's eth1 interface, filter: `http`
     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) ... Chrome/151.0.0.0
     Accept-Language: en-GB,en;q=0.9,en-US;q=0.8
 
+![http-request](httprequest.png)
+
 **Response (packet 22):**
     HTTP/1.0 200 OK
     Server: SimpleHTTP/0.6 Python/3.13.6
     Content-Type: text/html; charset=utf-8
     Content-Length: 2643
 
+![http-reponse](httpresponse.png)
+
 Full request/response viewed with Wireshark's Follow -> HTTP Stream,
 showing the entire conversation, including the returned HTML, in plain
 readable text.
+
+![http-stream](httpstream.png)
 
 ## What I Learned
 - GET / HTTP/1.1 = method, path, and protocol version, all in one line.
