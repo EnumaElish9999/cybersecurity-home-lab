@@ -1,7 +1,7 @@
 # Lab 10 – HTTP vs HTTPS
 
 ## Objective
-Compare a plaintext HTTP capture (Lab 9) against an HTTPS capture to see
+Compare a plaintext HTTP capture (Lab 8) against an HTTPS capture to see
 exactly what encryption hides and what it doesn't.
 
 ## Setup
@@ -30,8 +30,7 @@ Captured on Kali's eth1 interface, filter: `tls`
 **Client Hello (packet 275):**
 - TLS 1.2, Handshake Protocol: Client Hello
 - SNI (Server Name Indication): self.events.data.microsoft.com
-- The destination domain is visible even before encryption starts —
-  this is metadata, not content.
+- The destination domain is visible even before encryption starts
 
 ![Client Hello](tlsclient.png)
 
@@ -39,7 +38,7 @@ Captured on Kali's eth1 interface, filter: `tls`
 - Content Type: Application Data
 - Payload shown only as encrypted hex, e.g.:
   0000000000000001ebeef5478af9a4d232b966991f9c58346785439...
-- Compare to Lab 9, where the same kind of packet showed a full
+- Compared to Lab 8, where the same kind of packet showed a full
   readable "GET / HTTP/1.1" request with headers.
 
 ![App Data](tlsappdata.png)
