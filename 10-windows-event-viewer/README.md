@@ -11,7 +11,7 @@ and logoff event actually contain.
 Generated activity by locking and unlocking the screen, then reviewed
 the resulting events in the Security log.
 
-![Logon Event](logon.png)
+![Logon Event](logon1.png)
 
 ## Logon Event (Event ID 4624)
     Task Category: Logon
