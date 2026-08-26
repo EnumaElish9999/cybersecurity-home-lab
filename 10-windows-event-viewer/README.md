@@ -33,8 +33,8 @@ the resulting events in the Security log.
   4624 = successful logon, 4634 = logoff. Every event type has its own
   ID, and they're the vocabulary of Windows security logging.
 - "Subject" and "New Logon" are different things. Subject is whatever
-  triggered the log entry (often SYSTEM); New Logon is the actual
-  account whose session is starting. Easy to mix up at first glance.
+  triggered the log entry, and new Logon is the actual
+  account whose session is starting. 
 - Logon Type tells you *how* someone logged in, not just that they
   did: 2 = interactive (keyboard), 3 = network, 7 = unlock,
   10 = Remote Desktop. A Type 10 on a machine that shouldn't allow
@@ -43,6 +43,5 @@ the resulting events in the Security log.
   matching logoff. Two events close together in time aren't
   necessarily related — the Logon ID is what actually proves it.
 - Even a quiet home lab machine generates tens of thousands of
-  Security events. This is exactly why SIEM tools (covered later in
-  Wazuh) exist — nobody reviews this manually at scale.
+  Security events. 
 
