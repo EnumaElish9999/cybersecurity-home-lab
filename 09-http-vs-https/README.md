@@ -1,4 +1,4 @@
-# Lab 10 – HTTP vs HTTPS
+# Lab 11 – HTTP vs HTTPS
 
 ## Objective
 Compare a plaintext HTTP capture (Lab 8) against an HTTPS capture to see
