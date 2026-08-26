@@ -1,4 +1,4 @@
-# Lab 9 – HTTP Traffic Analysis
+# Lab 8 – HTTP Traffic Analysis
 
 ## Objective
 Capture a plain HTTP request/response and see what's visible when
