@@ -3,7 +3,7 @@
 ## Objective
 Deliberately trigger failed logon attempts and investigate the
 resulting Event ID 4625, comparing it against the successful 4624 from
-Lab 11.
+Lab 10.
 
 ## Setup
 - Windows 10 client, Event Viewer (eventvwr.msc), Security log
