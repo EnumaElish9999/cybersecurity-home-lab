@@ -1,4 +1,4 @@
-# Lab 11 – Windows Event Viewer
+# Lab 10 – Windows Event Viewer
 
 ## Objective
 Learn to navigate Windows Security logs and understand what a logon
