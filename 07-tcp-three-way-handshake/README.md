@@ -1,4 +1,4 @@
-# Lab 8 – TCP Three-Way Handshake
+# Lab 7 – TCP Three-Way Handshake
 
 ## Objective
 Capture and understand how a TCP connection is established.
