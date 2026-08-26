@@ -1,4 +1,4 @@
-# Lab 12 – Windows Authentication Investigation
+# Lab 11 – Windows Authentication Investigation
 
 ## Objective
 Deliberately trigger failed logon attempts and investigate the
