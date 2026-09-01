@@ -15,8 +15,7 @@ suspicious activity.
 1. Checked the default PowerShell log (no setup needed) — saw basic
    engine/provider start events (400, 600).
 2. Enabled Script Block Logging:
-       reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging"
-       /v EnableScriptBlockLogging /t REG_DWORD /d 1 /f
+       reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" /v EnableScriptBlockLogging /t REG_DWORD /d 1 /f
 4. Ran a normal command (Get-Process) and an encoded command
    (powershell -EncodedCommand ...) to compare.
 5. Reviewed the detailed log, Event ID 4104.
@@ -33,8 +32,7 @@ typed. Filtering by log level cuts through this noise fast.
 One event stood out at **Warning** level instead of the usual
 Verbose:
     Creating ScriptBlock text (1 of 1):
-    reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" 
-    /v EnableScriptBlockLogging /t REG_DWORD /d 1 /f
+    reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" /v EnableScriptBlockLogging /t REG_DWORD /d 1 /f
 
 PowerShell has a built-in list of suspicious patterns
 independent of whether full script block logging is even enabled
