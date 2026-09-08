@@ -1,8 +1,8 @@
 # Lab 14 – Active Directory Users & Groups
 
 ## Objective
-Create the three common account types in Active Directory — an admin
-account, a standard user, and a service account — and understand why
+Create the three common account types in Active Directory: an admin
+account, a standard user, and a service account, and understand why
 each is configured differently.
 
 ## Setup
