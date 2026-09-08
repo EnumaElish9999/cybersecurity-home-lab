@@ -17,7 +17,7 @@ Created three user accounts in the Lab Accounts OU:
 - "User must change password at next logon" left checked
 - Replaces vboxuser as the account used for admin tasks going forward
 
-![memberof](memberof.png)
+![memberof](Memberof.png)
 
 **Standard user account (jane doe)**
 - No group memberships beyond the default Domain Users
