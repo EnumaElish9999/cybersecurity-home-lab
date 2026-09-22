@@ -76,12 +76,10 @@ using Logon Type 5 (Service).
 ## What I Learned
 - A domain logon is really two events, not one: 4624 on the client
   ("you're allowed in") and 4768 on the domain controller ("here's
-  your Kerberos ticket"). The ticket is what enables Single Sign-On —
+  your Kerberos ticket"). The ticket is what enables Single Sign-On and
   once issued, the user can access other domain resources without
   re-entering their password.
-- "Realm" is Kerberos's own term for "domain" — same concept, older
-  vocabulary, since Kerberos predates Active Directory.
-- krbtgt is not a real service — it's the built-in account that signs
+- krbtgt is not a real service; it's the built-in account that signs
   every TGT the domain issues, so it appears in every single 4768
   event regardless of which user is logging in.
 - Default audit settings aren't guaranteed for every event type —
