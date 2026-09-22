@@ -28,12 +28,16 @@ normal logon screen can. Fixed by resetting the password in Active
 Directory Users and Computers with that checkbox unchecked, so the
 password was immediately final rather than pending a change.
 
+![domainfailed](domainfailed.png)
+
 **"Access is denied (5)" opening the Security log as jane.doe**
 Standard domain users can't read the Security log by default — this
 needs admin rights. Worked around by using the admin account instead;
 the correct real-world fix is adding the account to the built-in
 **Event Log Readers** group, which grants log-reading access without
 any broader admin rights.
+
+![accessdenied](accessdenied.png)
 
 ## What I Did
 1. Joined Win11-Client to cyberlab.local using harish.admin.
@@ -45,6 +49,8 @@ any broader admin rights.
 
 ## Findings
 
+![4624](4624.png)
+
 **4624 (on the client):**
     New Logon:
         Account Name:    jane.doe
@@ -55,6 +61,8 @@ any broader admin rights.
 Account Domain reads CYBERLAB here, instead of the local computer name
 seen in Lab 10 — the visible proof this logon was verified against the
 domain controller, not just checked locally.
+
+![4768](4768.png)
 
 **4768 (on the domain controller):**
     Account Name:    jane.doe
